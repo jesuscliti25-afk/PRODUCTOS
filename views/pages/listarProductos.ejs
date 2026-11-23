@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../secciones/head'); %>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <main>
+        <div class="container">
+            <%- include('../secciones/menu'); %>
+            <h1>Catalogo de Productos</h1>
+            <p>UT de San Juan</p>
+
+            <div class="row mt-5">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <a class="btn btn-primary" href="/insertarProducto">nuevo producto</a>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>listado de productos</h2>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                            <th>id</th>
+                                            <th>nombre</th>
+                                            <th>marca</th>
+                                            <th>precio</th>
+                                            <th>editar</th>
+                                            <th>eliminar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% productos.forEach((producto) => { %>
+                                        <tr>
+                                                <td><% producto.idProducto ></td>
+                                                <td><% producto.nombreProducto ></td>
+                                                <td><% producto.marcaProducto ></td>
+                                                <td><% producto.precioProducto ></td>
+                                                <td>
+                                                    <a class="btn btn-warning" href="/buscarProducto/<%= producto.idProducto%>" >Editar</a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger" href="/eliminarProducto/<%= producto.idProducto%>" >Eliminar</a>
+                                                </td>
+                                        </tr>
+                                        <% }); %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
+        <%- include('../secciones/footer'); %>
+    </footer>
+</body>
+
+</html>
