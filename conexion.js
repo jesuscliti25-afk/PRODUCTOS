@@ -2,7 +2,7 @@ var sequelize = require('sequelize')
 var productoModelo = require('./models/producto')
 
 //conexion con la base de datos
-/*const conexion = new sequelize('Productos','root','0426Miaangel',{
+/*const conexion = new sequelize('Productos','2wHixLELTdk5ntc.root','0426Miaangel',{
     host: 'localhost',
     port: '3306',
     dialect: 'mysql'
@@ -38,3 +38,4 @@ module.exports = {
     producto
 
 }
+
