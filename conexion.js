@@ -1,6 +1,5 @@
 var sequelize = require('sequelize')
 var productoModelo = require('./models/producto')
-const producto = require('./models/producto')
 
 //conexion con la base de datos
 /*const conexion = new sequelize('Productos','root','0426Miaangel',{
@@ -37,4 +36,5 @@ conexion.sync({force:false})
 
 module.exports = {
     producto
+
 }
