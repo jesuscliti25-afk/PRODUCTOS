@@ -1,8 +1,9 @@
 var sequelize = require('sequelize')
 var productoModelo = require('./models/producto')
+//const producto = require('./models/producto')
 
 //conexion con la base de datos
-/*const conexion = new sequelize('Productos','2wHixLELTdk5ntc.root','0426Miaangel',{
+/*const conexion = new sequelize('Productos','root','0426Miaangel',{
     host: 'localhost',
     port: '3306',
     dialect: 'mysql'
@@ -11,7 +12,7 @@ var productoModelo = require('./models/producto')
 //pass lP98vkkVChB0f9Ep
 
 //conexion  remota con TiDBCloud
-const conexion = new sequelize('Productos','root','lP98vkkVChB0f9Ep',{
+const conexion = new sequelize('Productos','2wHixLELTdk5ntc.root','lP98vkkVChB0f9Ep',{
     host: 'gateway01.us-west-2.prod.aws.tidbcloud.com',
     port: '4000',
     dialect: 'mysql',
@@ -36,6 +37,4 @@ conexion.sync({force:false})
 
 module.exports = {
     producto
-
 }
-

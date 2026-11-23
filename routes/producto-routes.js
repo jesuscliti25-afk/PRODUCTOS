@@ -83,5 +83,4 @@ router.get('/eliminarProducto/:idProducto', (req, res) => {
     })
 })
 
-
 module.exports = router;

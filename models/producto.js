@@ -4,7 +4,7 @@ module.exports = (conexion) => {
     const ProductoSchema = conexion.define('producto', {
         idProducto: {
             type: sequelize.INTEGER,
-            primarykey: true,
+            primaryKey: true,
             autoIncrement: true
         },
         nombreProducto: {
@@ -18,5 +18,4 @@ module.exports = (conexion) => {
         }
     });
     return ProductoSchema;
-
 }
