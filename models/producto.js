@@ -2,7 +2,7 @@ var sequelize = require('sequelize')
 
 module.exports = (conexion) => {
     const ProductoSchema = conexion.define('producto', {
-        idProd: {
+        idProducto: {
             type: sequelize.INTEGER,
             primarykey: true,
             autoIncrement: true
@@ -18,4 +18,5 @@ module.exports = (conexion) => {
         }
     });
     return ProductoSchema;
+
 }
